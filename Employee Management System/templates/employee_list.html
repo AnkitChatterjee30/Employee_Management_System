@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<style>
+    h1{
+        font-size: 45px;
+        margin-left: 240px;
+        text-decoration: underline;
+    }
+    body{
+        background-color: lightsteelblue;
+    }
+    table{
+        margin-top: 50px;
+        margin-left: 140px;
+        border: 1px black solid;
+        width: 1200px;
+    }
+    th{
+        margin-left: 5px;
+        border: 1px black solid;
+        background-color: black;
+        color: azure;
+        font-size: 37px;
+    }
+    td{
+        background-color: rgb(227, 239, 243);
+        border: 1px black solid;
+        font-size: 27px;
+    }
+    button {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        margin-left: 200px;
+        margin-top: 90px;
+        box-shadow: 5px 5px 15px black;
+    }
+
+    button:hover {
+        background-color: white;
+        color: black;
+        font-weight: 600;
+    }
+
+    button a {
+        text-decoration: none;
+        color: azure;
+    }
+
+    button a:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+    button:hover a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+<body>
+    <h1>Employee details</h1>
+    <table>
+        <tr>
+            {% for header in headings %}
+            <th>{{ header }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in data %}
+        <tr>
+            {% for cell in row %}
+                <td>
+                    {{ cell }}
+                </td>
+                
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        
+    </table>
+    <button class="home"><a href="/">Back to Home</a></button>
+</body>
+</html>

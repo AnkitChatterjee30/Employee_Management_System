@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(to left, black, lightgrey);
+        background-image: linear-gradient(to bottom black, grey);
+    }
+
+    .container {
+        width: 650px;
+        height: 400px;
+        margin-top: 150px;
+        align-items: center;
+        /* text-align: center; */
+        align-self: center;
+        border: 2px solid black;
+        border-radius: 5%;
+        margin-left: 300px;
+        filter: blur(0.8);
+        background-color: azure;
+    }
+
+    form {
+        margin-top: 50px;
+        font-size: 25px;
+    }
+
+    input[type=submit] {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: 1px solid black;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        margin-left: 80px;
+        /* box-shadow: 5px 5px 15px black; */
+    }
+
+    input[type=submit]:hover {
+        background-color: white;
+        color: black;
+        font-weight: 600;
+    }
+
+    .qwe {
+        width: 400px;
+        margin-left: 46px;
+        height: 40px;
+        font-size: 25px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid black;
+    }
+
+    .passw {
+        width: 400px;
+        height: 40px;
+        margin-left: 20px;
+        font-size: 25px;
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid black;
+    }
+
+    h1 {
+        margin-left: 100px;
+    }
+
+    label {
+        margin-left: 50px;
+    }
+
+    .fa {
+        position: fixed;
+    }
+
+    p {
+        margin-left: 50px;
+    }
+
+    a:visited {
+        color: blue;
+    }
+
+    .eye {
+        position: fixed;
+        margin-left: 400px;
+    }
+
+    #hide1 {
+        display: none;
+        position: absolute;
+    }
+
+    #hide2 {
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form action="dashboard" method="post">
+            <h1><u>Login</u></h1>
+            <label for="fname">Name</label>
+            <input type="text" name="fname" autocomplete="off" class="qwe">
+            <br>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" name="pass" autocomplete="off" class="passw">
+            <span class="eye" onclick="myFunction()">
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i>
+            </span>
+            <p>
+                Don't have an account ? <a href="signup">Signup Here</a>
+            </p>
+            <input type="submit" value="login">
+        </form>
+        <script>
+            function myFunction() {
+                var x = document.querySelector(".passw");
+                var y = document.querySelector("#hide1");
+                var z = document.querySelector("#hide2");
+
+                if (x.type == 'password') {
+                    x.type = 'text';
+                    y.style.display = "flex";
+                    z.style.display = "none";
+                }
+                else {
+                    x.type = 'password';
+                    y.style.display = "none";
+                    z.style.display = "flex";
+                }
+            }
+        </script>
+</body>
+
+</html>

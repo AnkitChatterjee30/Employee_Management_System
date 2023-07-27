@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Create an Account</title>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(to left, black, lightgrey);
+        background-image: linear-gradient(to bottom black, grey);
+    }
+
+    .container {
+        width: 650px;
+        height: 400px;
+        margin-top: 150px;
+        align-items: center;
+        /* text-align:center; */
+        align-self: center;
+        border: 2px solid black;
+        border-radius: 5%;
+        margin-left: 300px;
+        filter: blur(0.8);
+        background-color: lightblue;
+    }
+
+    form {
+        margin-top: 50px;
+        font-size: 25px;
+    }
+
+    input[type=submit] {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: 1px solid black;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        /* margin-top: 20px; */
+        margin-left: 100px;
+        /* box-shadow: 5px 5px 15px black; */
+    }
+
+    input[type=submit]:hover {
+        background-color: white;
+        color: black;
+        font-weight: 600;
+    }
+
+    .namer,
+    .pass,
+    .confirm,
+    input[type=mail] {
+        width: 300px;
+        border: none;
+        font-size: 25px;
+        background-color: transparent;
+        border-bottom: 1px solid black;
+        position: absolute;
+    }
+
+    .namer {
+        margin-left: 193px;
+    }
+
+    .confirm {
+        margin-left: 72px;
+    }
+
+    input[type=mail] {
+        margin-left: 167px;
+    }
+
+    .pass {
+        margin-left: 106px;
+    }
+
+    label,
+    h1,
+    p {
+        margin-left: 30px;
+    }
+
+    a:visited {
+        color: blue;
+    }
+
+    .fa {
+        position: fixed;
+    }
+
+    p {
+        margin-left: 50px;
+    }
+
+    a:visited {
+        color: blue;
+    }
+
+    .eye1 {
+        position: fixed;
+        margin-left: 400px;
+    }
+
+    .eye2 {
+        position: fixed;
+        margin-left: 365px;
+    }
+
+    #hide1 {
+        display: none;
+        position: absolute;
+    }
+
+    #hide2 {
+        position: absolute;
+    }
+
+    #hide3 {
+        display: none;
+        position: absolute;
+    }
+
+    #hide4 {
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form action="success_register" method="post">
+            <h1><u>Registration Form</u></h1>
+            <label for="fname">Name</label>
+            <input type="text" name="fname" autocomplete="off" class="namer">
+            <br>
+            <label for="mail">Email Id</label>
+            <input type="mail" name="mail" autocomplete="off">
+            <br>
+            <label for="password">New Password</label>
+            <input type="password" name="pass" class="pass" autocomplete="off">
+            <span class="eye1" onclick="myFunction1()">
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i>
+            </span>
+            <br>
+            <label for="confirm">Confirm Password</label>
+            <input type="password" name="confirm" class="confirm" autocomplete="off">
+            <span class="eye2" onclick="myFunction2()">
+                <i id="hide3" class="fa fa-eye"></i>
+                <i id="hide4" class="fa fa-eye-slash"></i>
+            </span>
+            <p>
+                Already have an account ? <a href="login">Login</a>
+            </p>
+            <input type="submit" value="Register">
+        </form>
+        <script>
+            function myFunction1() {
+                var x = document.querySelector(".pass");
+                var y = document.querySelector("#hide1");
+                var z = document.querySelector("#hide2");
+
+                if (x.type == 'password') {
+                    x.type = 'text';
+                    y.style.display = "flex";
+                    z.style.display = "none";
+                }
+                else {
+                    x.type = 'password';
+                    y.style.display = "none";
+                    z.style.display = "flex";
+                }
+            }
+            function myFunction2() {
+                var a = document.querySelector(".confirm");
+                var b = document.querySelector("#hide3");
+                var c = document.querySelector("#hide4");
+
+                if (a.type == 'password') {
+                    a.type = 'text';
+                    b.style.display = "flex";
+                    c.style.display = "none";
+                }
+                else {
+                    a.type = 'password';
+                    b.style.display = "none";
+                    c.style.display = "flex";
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

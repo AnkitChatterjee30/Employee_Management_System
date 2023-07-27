@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Oleo+Script+Swash+Caps&family=Roboto:wght@400;700&family=Tangerine:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montez&family=Oleo+Script+Swash+Caps&family=Roboto:wght@400;700&family=Tangerine:wght@700&display=swap"
+        rel="stylesheet">
+    <title>Certificate of {{ name_certificate }}</title>
+</head>
+<style>
+    body {
+        background-color: lightgoldenrodyellow;
+    }
+
+    .certhead {
+        align-self: center;
+        font-size: 60px;
+        text-decoration: underline;
+        align-items: center;
+        text-align: center;
+        color: darkred;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .matter {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    .matter b {
+        text-decoration: wavy;
+        font-family: 'Lora', serif;
+        font-family: 'Oleo Script Swash Caps', cursive;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Tangerine', cursive;
+        font-weight: 500;
+    }
+
+    .signature {
+        font-family: 'Lora', serif;
+        font-family: 'Montez', cursive;
+        font-family: 'Oleo Script Swash Caps', cursive;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Tangerine', cursive;
+        font-size: 35px;
+        margin-top: 40px;
+    }
+
+    .ceo {
+        font-size: 30px;
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: 1px solid black;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        margin-top: 20px;
+        /* box-shadow: 5px 5px 15px black; */
+    }
+
+    button:hover {
+        background-color: white;
+        color: black;
+        font-weight: 600;
+    }
+
+    button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    button:hover a {
+        color: black;
+    }
+</style>
+
+<body>
+
+    <div class="certhead">Certificate of Appreciation</div>
+    <div class="matter">This Certificate is presented to
+        <b>{{ name_certificate }}</b>
+        for his excellence over the last few years in our company.
+        <br>
+        Let's hope <b>{{ name_certificate }}</b> will work with the same energy, efficiency and enthusiam in the
+        upcoming years as well.
+    </div>
+    <div class="signature">Elon Musk</div>
+    <div class="ceo">CEO <br>ABC Company</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="home"><a href="/">Back to Home</a></button>
+
+</body>
+
+</html>

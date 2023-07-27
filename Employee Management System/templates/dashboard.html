@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }}'s dashboard</title>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(to left, rgb(1, 1, 44), black);
+        color: azure;
+    }
+
+    .container {
+        font-size: 45px;
+        margin-left: 200px;
+        margin-top: 50px;
+        text-decoration: underline;
+    }
+
+    a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: 1px solid wheat;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 1190px;
+    }
+
+
+    input[type=submit]:hover {
+        background-color: white;
+        color: black;
+        font-weight: 600;
+    }
+
+    button:hover {
+        background-color: white;
+        color: black;
+        font-weight: 600;
+    }
+
+    button:hover a {
+        color: black;
+    }
+
+    input[type=text] {
+        width: 600px;
+        height: 40px;
+        font-size: 25px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid yellow;
+        font-family: 'Times New Roman', Times, serif;
+        color: azure;
+    }
+
+    .certi {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: 1px solid wheat;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        margin-top: 15px;
+        margin-left: 200px;
+        /* box-shadow: 5px 5px 15px black; */
+    }
+
+    .appu {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: 1px solid wheat;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -130px;
+        margin-left: 200px;
+        /* box-shadow: 5px 5px 15px black; */
+    }
+
+    label {
+        font-size: 25px;
+    }
+
+    .form1 {
+        margin-top: 50px;
+    }
+
+    .form2 {
+        margin-top: 100px;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .tasks {
+        z-index: 5;
+    }
+
+    input[type=radio] {
+        z-index: 5;
+    }
+</style>
+
+<body>
+    <div class="container">
+        Welcome {{name}} to your dashboard
+    </div>
+    <br>
+    <div class="buttons">
+        <button><a href="/logout">logout</a></button>
+    </div>
+    <form action="certificate" method="post" class="form1">
+        <label for="name">Enter your full name for the Certificate :</label>
+        <input type="text" autocapitalize="on" autocomplete="off" name="name_certificate" required>
+        <br>
+        <div class="tasks">
+            <label for="tasks">Tasks completed by you till now :</label>
+            <br>
+            <label for="task-1">Task-1 : </label>
+            <label for="yes">Yes</label>
+            <input type="radio" value="1" name="task-1">
+            <label for="no">No</label>
+            <input type="radio" value="0" name="task-1">
+            <br>
+            <label for="task-2">Task-2 : </label>
+            <label for="yes">Yes</label>
+            <input type="radio" value="1" name="task-2">
+            <label for="no">No</label>
+            <input type="radio" value="0" name="task-2">
+            <br>
+            <label for="task-3">Task-3 :</label>
+            <label for="yes">Yes</label>
+            <input type="radio" value="1" name="task-3">
+            <label for="no">No</label>
+            <input type="radio" value="0" name="task-3">
+            <br>
+            <label for="task-4">Task-4 :</label>
+            <label for="yes">Yes</label>
+            <input type="radio" value="1" name="task-4">
+            <label for="no">No</label>
+            <input type="radio" value="0" name="task-4">
+            <br>
+            <label for="task-5">Task-5 :</label>
+            <label for="yes">Yes</label>
+            <input type="radio" value="1" name="task-5">
+            <label for="no">No</label>
+            <input type="radio" value="0" name="task-5">
+            <br>
+        </div>
+        <input type="submit" value="Certificate" class="certi">
+    </form>
+    <form action="appointment" method="post" class="form2">
+        <label for="name">Enter your full name for the Appointment Letter :</label>
+        <input type="text" autocapitalize="on" autocomplete="off" name="name_certificate" required>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Appointment Letter" class="appu">
+    </form>
+</body>
+
+</html>
